@@ -1,0 +1,83 @@
+#include<stdio.h>
+#define size 5
+int front=-1,rear=-1;
+int queue[size];
+void enQueue(int queue[],int value){
+     if(rear==-1 && front==-1){
+        rear=0;
+        front=0;
+        printf("Enter the element:");
+  	scanf("%d",&value);
+        queue[rear]=value;
+        }
+     else if((rear+1)%size==front){
+        printf("Queue is full\n");
+        }
+     else{
+         rear=(rear+1)%size;
+         printf("Enter the element:");
+  	scanf("%d",&value);
+        queue[rear]=value;
+        }
+       }
+       
+void deQueue(int queue[],int value){
+      if(front==-1 && rear==-1){
+         printf("Queue is Empty\n");
+         }
+      else if(rear==front){
+        printf("Element deleted is %d\n",queue[front]);
+        rear=-1;
+        front=-1;
+         }
+      else{
+         printf("Element deleted is %d\n",queue[front]);
+         front=(front+1)%size;
+       }
+     }
+       
+void display(int queue[],int value){
+      if(rear==-1 && front==-1){
+         printf("Queue is Empty\n");
+         }
+      else{
+         printf("Elements in queue are:\n");
+         int i=front;
+         while(1){
+         printf("%d\n",queue[i]);
+         if(i==rear)
+         break;
+         i=(i+1)%size;
+            }
+            printf("\n");
+           }
+         }
+
+int main()
+{
+  int value;
+  int ch;
+  do {
+  printf("-------CIRCULAR QUEUE OPERATIONS-------\n");
+  printf("1.insert element in queue (enQueue)\n");
+  printf("2.delete a element from queue (deQueue)\n");
+  printf("3.Display elements in queue\n");
+  printf("4.Exit\n");
+  printf("Enter your choice:");
+  scanf("%d",&ch);
+  switch(ch){
+    case 1:enQueue(queue,value);
+          break;
+    case 2:deQueue(queue,value);
+          break;
+    case 3:display(queue,value);
+          break;
+    case 4:printf("Exiting program");
+          break;
+    default:printf("Wrong choice");
+    }
+    }while(ch!=4);
+   
+  return 0;
+  }
+  
