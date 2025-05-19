@@ -1,8 +1,9 @@
-**📘 Data Structures & Algorithms Assignments – Computer Engineering
+📘 Data Structures & Algorithms Assignments – Computer Engineering
 📍 Institution
 Sanjivani College of Engineering, Kopargaon
 Department of Computer Engineering
-Academic Year: 2024-2025**
+Academic Year: 2024-2025
+
 **Name: Maile Sarwadnya Praksh**
 **DIV:G
 PRN:0124UCSM1016
@@ -10,6 +11,7 @@ ROLL NO:16**
 
 
 **📄 Overview**
+
 This repository contains solutions and documentation for the assignments related to Data Structures and Algorithms (DSA), as listed by the Department of Computer Engineering. Each assignment explores key concepts in DSA using C/C++ or Java, covering database structures, sorting algorithms, stacks, queues, linked lists, and algorithm analysis.
 
 
